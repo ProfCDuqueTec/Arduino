@@ -1,0 +1,5 @@
+Image Formats
+Raster-based
+These formats represent images as arrangements of pixels. They are the most common way to store and transmit images due to their flexibility and versatility. Raster-based formats are well suited for photographs, but need more care in terms of scientific and engineering contexts because of their "pixel-based" nature.
+
+Some of the most common raster-based forma
