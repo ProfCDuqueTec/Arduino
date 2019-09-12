@@ -1,0 +1,27 @@
+#include <Servo.h>
+Servo myservo;
+int sensorValue = 0;
+int sensorPin = A0;
+int angle;
+
+void setup() {
+  Serial.begin(115200);
+  myservo.attach(13);
+}
+
+void loop() {
+  sensorValue = analogRead(sensorPin);
+
+  Serial.print("Value: ");
+  Serial.print(sensorValue);
+  Serial.print("\t");
+
+  angle = map(sensorValue, 200, 800, 180, 0);
+  myservo.write(angle);
+  Serial.print("\t");
+
+  Serial.print("Angle: ");
+  Serial.println(angle);
+
+  delay(10);
+}
